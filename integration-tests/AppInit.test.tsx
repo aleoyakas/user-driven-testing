@@ -1,14 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import App from '../containers/App';
-import purchaseTickets from '../requests/purchaseTickets';
-
-jest.mock('../requests/purchaseTickets');
-const purchaseTicketsMock = purchaseTickets as jest.Mock;
-
-beforeEach(() => {
-  purchaseTicketsMock.mockReset();
-});
+import App from '../src/containers/App';
 
 describe('App', () => {
   test('App loads correctly', () => {

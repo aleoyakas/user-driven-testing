@@ -1,10 +1,10 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import user from '@testing-library/user-event';
-import App from '../containers/App';
-import purchaseTickets from '../requests/purchaseTickets';
+import EventsGroup from '../src/containers/EventsGroup';
+import purchaseTickets from '../src/requests/purchaseTickets';
 
-jest.mock('../../requests/purchaseTickets');
+jest.mock('../src/requests/purchaseTickets');
 const purchaseTicketsMock = purchaseTickets as jest.Mock;
 
 beforeEach(() => {
@@ -12,19 +12,8 @@ beforeEach(() => {
 });
 
 describe('Event', () => {
-  test('Event loads correctly', () => {
-    render(<App />);
-
-    expect(screen.getByRole('heading', { name: /User Driven Testing/i })).toBeVisible();
-    expect(screen.getByRole('heading', { name: /Super cool event!/i })).toBeVisible();
-    expect(screen.getByRole('button', { name: /Remove/i })).toBeVisible();
-    expect(screen.getByRole('button', { name: /Add/i })).toBeVisible();
-    expect(screen.getByRole('button', { name: /Empty basket/i })).toBeVisible();
-    expect(screen.getByRole('button', { name: /Purchase/i })).toBeVisible();
-  });
-
   test('tickets can be added', () => {
-    render(<App />);
+    render(<EventsGroup />);
 
     const addBtn = screen.getByRole('button', { name: /Add/i });
     const ticketTotal = screen.getByText('0');
@@ -37,7 +26,7 @@ describe('Event', () => {
   });
 
   test('tickets can be reduced down to 0', () => {
-    render(<App />);
+    render(<EventsGroup />);
 
     const addBtn = screen.getByRole('button', { name: /Add/i });
     const removeBtn = screen.getByRole('button', { name: /Remove/i });
@@ -54,7 +43,7 @@ describe('Event', () => {
   });
 
   test('empty basket button sets ticket count to 0', () => {
-    render(<App />);
+    render(<EventsGroup />);
 
     const addBtn = screen.getByRole('button', { name: /Add/i });
     const emptyBasketBtn = screen.getByRole('button', { name: /Empty basket/i });
@@ -71,7 +60,7 @@ describe('Event', () => {
   });
 
   test('purchase button calls purchaseTickets', () => {
-    render(<App />);
+    render(<EventsGroup />);
 
     const addBtn = screen.getByRole('button', { name: /Add/i });
     const purchaseBtn = screen.getByRole('button', { name: /Purchase/i });
