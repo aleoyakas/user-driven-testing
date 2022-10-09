@@ -26,7 +26,7 @@ const Events: FC = () => {
         ...currentValue,
         [eventKey]: currentValue[eventKey] - 1,
       }));
-    }
+    };
   };
 
   const resetTicketCount = () =>

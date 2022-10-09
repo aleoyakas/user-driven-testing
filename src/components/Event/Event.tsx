@@ -7,7 +7,7 @@ interface Props {
   ticketCount: number
   increaseTicketCount: () => void
   decreaseTicketCount: () => void
-}
+};
 
 const Event: FC<Props> = ({
   eventName,

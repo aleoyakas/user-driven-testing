@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import Events from '../Events';
+import Events from '../EventsGroup';
 import styles from './App.module.css';
 
 const App: FC = () => {
