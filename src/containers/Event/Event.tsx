@@ -12,7 +12,7 @@ const Event: FC = () => {
   const decreaseTicketCount = () => {
     if (ticketCount > 0) {
       setTicketCount((currentValue) => currentValue - 1);
-    }
+    };
   };
 
   const resetTicketCount = () =>
