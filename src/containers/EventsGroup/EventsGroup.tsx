@@ -2,9 +2,9 @@ import React, { FC, useState } from 'react';
 import purchaseTickets from '../../requests/purchaseTickets';
 import Button from '../../components/Button';
 import Event from '../../components/Event';
-import styles from './Events.module.css';
+import styles from './EventsGroup.module.css';
 
-const Events: FC = () => {
+const EventsGroup: FC = () => {
   const ticketCountInit = {
     superCoolEvent: 0,
     anotherAmazingEvent: 0,
@@ -60,4 +60,4 @@ const Events: FC = () => {
   );
 }
 
-export default Events;
+export default EventsGroup;
