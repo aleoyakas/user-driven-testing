@@ -1,0 +1,68 @@
+.container,
+.btnGroup {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container {
+  max-width: 300px;
+  flex-direction: column;
+  border: 1px solid white;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: rgba(0,0,0,0.2);
+}
+
+.btn {
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 10px;
+  outline-offset: 5px;
+  min-width: 120px;
+}
+
+.btnPrimary {
+  background-color: rebeccapurple;
+  border: 2px solid rebeccapurple;
+  color: white;
+}
+
+.btnPrimary:hover,
+.btnPrimary:focus-visible {
+  background-color: rgb(86, 37, 134);
+  border-color: rgb(86, 37, 134);
+}
+
+.btnSecondary {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.btnSecondary:hover,
+.btnSecondary:focus-visible {
+  background-color: white;
+  color: #282c34;
+}
+
+.btn[aria-disabled=true] {
+  background-color: grey;
+  border-color: grey;
+  color: white;
+  cursor: default;
+}
+
+@media (min-width: 900px) {
+  .container {
+    font-size: 24px;
+    max-width: 450px;
+  }
+
+  .btn {
+    font-size: 20px;
+    width: 200px;
+  }
+}
