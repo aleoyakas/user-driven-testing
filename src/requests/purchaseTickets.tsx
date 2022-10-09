@@ -1,3 +1,3 @@
-const purchaseTickets = (_ticketCount: number) => alert('This isn\'t the point of this repo...');
+const purchaseTickets = (ticketCount: number) => alert(`You've bought ${ticketCount} ticket(s)`);
 
 export default purchaseTickets;

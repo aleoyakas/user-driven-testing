@@ -9,8 +9,11 @@ const Event: FC = () => {
   const increaseTicketCount = () =>
     setTicketCount((currentValue) => currentValue + 1);
 
-  const decreaseTicketCount = () =>
-    setTicketCount((currentValue) => currentValue - 1);
+  const decreaseTicketCount = () => {
+    if (ticketCount > 0) {
+      setTicketCount((currentValue) => currentValue - 1);
+    }
+  };
 
   const resetTicketCount = () =>
     setTicketCount(0);
@@ -22,6 +25,7 @@ const Event: FC = () => {
         <button 
           onClick={decreaseTicketCount}
           className={joinClasses([styles.btn, styles.btnSecondary])}
+          aria-disabled={ticketCount <= 0}
         >
           Remove
         </button>
@@ -37,7 +41,7 @@ const Event: FC = () => {
         <button
           onClick={resetTicketCount}
           className={joinClasses([styles.btn, styles.btnSecondary])}
-          aria-disabled={!ticketCount}
+          aria-disabled={ticketCount <= 0}
         >
           Empty basket
         </button>
