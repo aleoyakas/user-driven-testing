@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository is demo code used for my blog on [User Driven Testing](https://dev.to/aleoyakas/user-driven-testing). The code is split into 4 stages: 
+This repository is demo code used for my blog on [User Driven Testing](https://dev.to/aleoyakas/user-driven-testing-mc6). The code is split into 4 stages: 
 
 1. [Application with no tests](https://github.com/aleoyakas/user-driven-testing/tree/stage/1-no-tests)
 1. [Adding tests with React Testing Library](https://github.com/aleoyakas/user-driven-testing/tree/stage/2-added-react-testing-library)
